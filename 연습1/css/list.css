@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+}
+.navbar ul {
+    display: flex;
+}
+.navbar li {
+    list-style: none;
+}
+
+.main_div{
+    display: grid;
+    grid-template-columns: 110px 110px 110px 110px 110px 110px;
+}
+.main_div img {
+    margin-top: 10px;
+}
+
+.main_div2{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}

@@ -1,0 +1,42 @@
+:root {
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+header .navbar_logo i {
+    color: var(--red-color);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+.navbar_logo a{
+    text-decoration: none;
+}
+.navbar_logo a:visited ,:link{
+    color: white;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}
+.navbar_menu li {
+    display: block;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function printCenter(s) {
+            var answer = '';
+            if(s.length % 2 ==0){
+            answer = answer.concat(s[s.length/2 -1],s[s.length/2]);    // 받아온 문자열s 를 abcd 길이의 2분의1-1 부분과 2분의1부분 표시
+            }else{
+                answer = answer.concat(s[Math.floor(s.length/2)]); 
+            }
+            return answer; 
+        }
+
+        let quizArray = [
+            {quiz: "이름은?",
+            answer:"홍길동"},
+            {quiz: "나이는?",
+            answer:"14"},
+            {quiz: "거주지는?",
+            answer:"부산"}
+        ];
+        function randomQuiz(quizArray,count){
+            let score = 0;
+            let random = 0;
+
+            for(let i=0;i<count;i++){
+                random = Math.floor(Math.random()*quizArray.length);
+                let ans = prompt(quizArray[random].quiz);
+                if(ans == quizArray[random].answer){
+                    score++;
+                    }
+            }
+            return `총 ${count}문제중 ${score}개 맞췄습니다`;
+        }
+
+    
+
+         // console.log(`총+${n}+중+${correct}`);
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
