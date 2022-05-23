@@ -1,7 +1,7 @@
 
 import './App.css';
 import HookComp from './component/HookComp';
-import UseReducerComp from './component/ReduserComp';
+import ReducerComp from './component/ReduserComp';
 import ReducerComp2 from './component/ReduserComp2';
 import ExReducer from './component/ExReducer';
 
@@ -15,7 +15,7 @@ function App() {
         <HookComp/>
       </header>
       <header className="App-header">
-        <UseReducerComp/>
+        <ReducerComp/>
         <ReducerComp2/>
       </header>
       
