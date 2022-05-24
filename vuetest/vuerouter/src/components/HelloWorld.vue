@@ -18,6 +18,7 @@
 <script>
 import datas from '@/assets/datas.json'
 
+
 export default {
   name: 'HelloWorld',
   props: {

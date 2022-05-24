@@ -10,6 +10,7 @@
       <router-link to="/double">중첩</router-link> |
       <router-link to="/doubledynamic">사용자페이지</router-link>
     </nav>
+    
       <button @click=" $router.push({name: 'show'}) ">show</button>
       <button @click=" $router.push('/double') ">중첩</button><br>
       
