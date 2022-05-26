@@ -1,0 +1,68 @@
+{
+  "name": "vue-simple-gallery-uploader",
+  "version": "0.1.2",
+  "private": false,
+  "author": {
+    "email": "phattranminh96@gmail.com",
+    "name": "Seth Phat",
+    "url": "https://github.com/sethsandaru"
+  },
+  "main": "./dist/vue-uploader.umd.min.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-lib": "vue-cli-service build --target lib --name vue-uploader ./src/index.js"
+  },
+  "dependencies": {
+    "vuedraggable": "^2.24.0"
+  },
+  "devDependencies": {
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-eslint": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "vue-template-compiler": "^2.6.10",
+    "serialize-javascript": ">=2.1.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "keywords": [
+    "vue uploader ui",
+    "vue upload ui",
+    "vue uploader ui component",
+    "vue component",
+    "vue gallery uploader"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethsandaru/vue-simple-gallery-uploader.git"
+  }
+}
