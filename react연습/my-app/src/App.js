@@ -4,6 +4,7 @@ import { GoogleAuthProvider, signInWithPopup,
           FacebookAuthProvider
 } from 'firebase/auth';
 import { useState } from 'react';
+import {firestore} from './firebase';
 
 function App() {
 
@@ -31,9 +32,28 @@ function App() {
         console.log(err);
       });
   }
+  function col(){
+    post.get()
+      .then((docs) => {
+        let bucket_data = [];
+        docs.forEach((doc) => {
+          // 도큐먼트 객체를 확인해보자!
+          console.log(doc);
+          // 도큐먼트 데이터 가져오기
+          console.log(doc.data());
+          // 도큐먼트 id 가져오기
+          console.log(doc.id);
+
+          if (doc.exists) {
+            bucket_data = [...bucket_data, { id: doc.id, ...doc.data() }];
+          }
+        });
+        console.log(bucket_data);
+  });
   return (
     <div className="App">
       <header className="App-header">
+        <button onClick={col}> call버튼</button>
       <button onClick={handleGoogleLogin}>구글 Login</button>
       <p>
       {userData ? userData.displayName : null}
@@ -60,6 +80,6 @@ function App() {
       </header>
     </div>
   );
-}
+}}
 
 export default App;
