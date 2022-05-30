@@ -39,12 +39,13 @@ export default {
       commit('fnSetLoading', true) // 스토어에 시간걸림으로 상태 변경
       // 파이어베이스에 이메일 회원 생성 및 저장
       firebase.auth().createUserWithEmailAndPassword(payload.pEmail,
-          payload.pPassword)
+          payload.pPassword, payload.pNickname)
         .then(pUserInfo => {
           // 신규 회원 이메일 정보를 스토어에 저장
           commit('fnSetUser', {
-            email: pUserInfo.user.email  // <-- 파이어베이스 v9 마이그레이션 : user 추가
+            email: pUserInfo.user.email,       // <-- 파이어베이스 v9 마이그레이션 : user 추가
           })
+
           commit('fnSetLoading', false) // 스토어에 시간완료 상태 변경
           commit('fnSetErrorMessage', '') // 스토어 에러메시지 초기화
           router.push('/main') // 로그인 후 첫 화면으로 이동
@@ -61,7 +62,7 @@ export default {
       commit('fnSetLoading', true) // 스토어에 시간걸림으로 상태 변경
       // 파이어베이스에 이메일 회원 로그인 인증 처리 요청
       firebase.auth().signInWithEmailAndPassword(payload.pEmail,
-          payload.pPassword)
+          payload.pPassword ,payload.pNickname)
         .then(pUserInfo => {
           // 로그인이 성공하면 스토어에 계정정보 저장
           commit('fnSetUser', {

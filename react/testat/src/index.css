@@ -58,7 +58,7 @@ h1 {
 	animation-delay: -0.5s;
 	animation-timing-function: steps(10);
 	animation-iteration-count: infinite;
-  
+
 }
 
 .bird-container {
@@ -71,8 +71,8 @@ h1 {
 
 
 .bird--one {
-  animation-duration: 1s;
-  animation-delay: -0.5s;
+	animation-duration: 1s;
+	animation-delay: -0.5s;
 }
 
 
@@ -80,4 +80,8 @@ h1 {
 	0% {
 		background-position: -3600px 0;
 	}
+
 }
+
+
+

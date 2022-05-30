@@ -13,6 +13,7 @@
         <form @submit.prevent="fnRegisterUser">
           <!-- 필수 입력사항이 되도록 required 어트리뷰트 적용 -->
           <v-text-field name="Email" label="이메일" type="email" v-model="sEmail" required></v-text-field>
+          <v-text-field name="Nickname" label="닉네임" type="text" v-model="sNickname" required></v-text-field>
           <v-text-field name="Password" label="비밀번호" type="password" v-model="sPassword" required>
           </v-text-field>
           <!-- 비밀번호 확인이 맞는지 검사하도록 rules 어트리뷰트 사용-->
@@ -43,7 +44,8 @@
         bAlert: false, // 오류 메시지 표시 여부
         sEmail: '', // 이메일 입력값 임시 저장
         sPassword: '', // 비밀번호 입력값 임시 저장
-        sConfirmPassword: '' // 비밀번호 입력 확인값 임시 저장
+        sConfirmPassword: '', // 비밀번호 입력 확인값 임시 저장
+        sNickname : ''
       }
     },
     computed: {
@@ -67,7 +69,8 @@
         if (this.fnComparePassword == true) {
           this.$store.dispatch('fnRegisterUser', {
             pEmail: this.sEmail,
-            pPassword: this.sPassword
+            pPassword: this.sPassword,
+            pNickname: this.sNickname
           })
         }
       },

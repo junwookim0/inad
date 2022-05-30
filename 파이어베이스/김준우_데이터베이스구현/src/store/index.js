@@ -14,8 +14,6 @@ import { getAuth,
   deleteUser } from "firebase/auth";
 
 // 9버전 storage
-import { getStorage, ref } from "firebase/storage";
-const storage = getStorage();
 
 
 // 파이어베이스 인증을 위한 객체
@@ -118,11 +116,8 @@ export default new Vuex.Store({
         console.log(err)
       })
     },
-    fndoUpload({
-      commit
-    }){
-      
-    }
+    
+    
   },
 
   modules: {},
