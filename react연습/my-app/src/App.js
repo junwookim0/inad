@@ -35,7 +35,7 @@ function App() {
   function col(){
     post.get()
       .then((docs) => {
-        let bucket_data = [];
+        let post_data = [];
         docs.forEach((doc) => {
           // 도큐먼트 객체를 확인해보자!
           console.log(doc);
@@ -45,10 +45,10 @@ function App() {
           console.log(doc.id);
 
           if (doc.exists) {
-            bucket_data = [...bucket_data, { id: doc.id, ...doc.data() }];
+            post_data = [...post_data, { id: doc.id, ...doc.data() }];
           }
         });
-        console.log(bucket_data);
+        console.log(post_data);
   });
   return (
     <div className="App">
