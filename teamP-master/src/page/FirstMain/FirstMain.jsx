@@ -6,6 +6,7 @@ const FirstMain = () => {
     return (
         <div>
             <Logo/>
+            
             <Login/>
             <Intro/>
         </div>

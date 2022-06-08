@@ -25,6 +25,8 @@ function App() {
           </Route>
           <Route path="/not-found" element={<NotFound />}></Route>
         </Routes>
+        
+        <footer>푸터</footer>
     </div>
   );
 }
