@@ -11,7 +11,15 @@ const Nav = () => {
     const goHome = () => {
         navigate("/home");
     };
-
+    const goIntro = () => {
+        navigate("/intro");
+    };
+    const goEvent = () => {
+        navigate("/event");
+    };
+    const goReview = () => {
+        navigate("/reviewlist");
+    };
 
     return (
         <div>
@@ -21,9 +29,9 @@ const Nav = () => {
                         <span className="logo_text">: UPTOWN</span>
                     </div>
                     <ul className="navbar_menu">
-                        <li>소개</li>
-                        <li>이벤트</li>
-                        <li>리뷰</li>
+                        <li onClick={goIntro}>소개</li>
+                        <li onClick={goEvent}>이벤트</li>
+                        <li onClick={goReview}>리뷰</li>
                         <li>거래</li>
                     </ul>
                     <ul class="gnb_img">

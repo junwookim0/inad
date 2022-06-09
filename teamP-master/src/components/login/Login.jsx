@@ -15,7 +15,7 @@ function Login() {
         signInWithPopup(auth, gprovider) // popup을 이용한 signup
         .then((data) => {
             setUserData(data.user); // user data 설정
-            //navigate("/Home");
+            navigate("/Home");
             console.log(data) // console로 들어온 데이터 표시
             
         })
